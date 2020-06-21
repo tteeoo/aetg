@@ -1,3 +1,3 @@
-module github.com/tteeoo/metg
+module github.com/tteeoo/aetg
 
 go 1.14

@@ -3,7 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/tteeoo/metg/parse"
+	"github.com/tteeoo/aetg/parse"
 	"os"
 )
 
@@ -13,17 +13,17 @@ func main() {
 
 		// Take an expression from stdin
 		reader := bufio.NewReader(os.Stdin)
-		fmt.Print("metg> ")
+		fmt.Print("aetg> ")
 		strExp, err := reader.ReadString('\n')
 		strExp = strExp[:len(strExp)-1]
 		if err != nil {
-			fmt.Println("metg: error:", err)
+			fmt.Println("aetg: error:", err)
 		}
 
 		// Parse the expression
 		exp, err := parse.GetExpTree(strExp)
 		if err != nil {
-			fmt.Println("metg: error:", err)
+			fmt.Println("aetg: error:", err)
 		} else {
 
 			// Evaluate the expression and print its value

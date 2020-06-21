@@ -3,7 +3,7 @@ package parse
 import (
 	"strconv"
 	"errors"
-	"github.com/tteeoo/metg/exp"
+	"github.com/tteeoo/aetg/exp"
 )
 
 func newOp(symbol string, l exp.Exp, r exp.Exp) (exp.Exp, error) {
