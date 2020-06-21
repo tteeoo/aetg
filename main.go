@@ -1,25 +1,33 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
-	"github.com/tteeoo/metg/exp"
+	"github.com/tteeoo/metg/parse"
+	"os"
 )
 
 func main() {
 
-	e := exp.Add{
-		L: exp.Div{
-			L: exp.Num{Val: 12.123123},
-			R: exp.Mul{
-				L: exp.Sub{
-					L: exp.Num{Val: 932.3},
-					R: exp.Num{Val: 32.553},
-				},
-				R: exp.Num{Val: 509},
-			},
-		},
-		R: exp.Num{Val: 4},
+	for {
+
+		// Take an expression from stdin
+		reader := bufio.NewReader(os.Stdin)
+		fmt.Print("metg> ")
+		strExp, err := reader.ReadString('\n')
+		strExp = strExp[:len(strExp)-1]
+		if err != nil {
+			fmt.Println("metg: error:", err)
+		}
+
+		// Parse the expression
+		exp, err := parse.GetExpTree(strExp)
+		if err != nil {
+			fmt.Println("metg: error:", err)
+		} else {
+
+			// Evaluate the expression and print its value
+			fmt.Println(exp.Eval())
+		}
 	}
-	fmt.Println(e)
-	fmt.Println(e.Eval())
 }
