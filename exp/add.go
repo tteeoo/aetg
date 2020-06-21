@@ -12,7 +12,7 @@ type Add struct {
 
 // Eval returns the value of an Add
 func (a Add) Eval() float64 {
-	return a.L.Eval() - a.R.Eval()
+	return a.L.Eval() + a.R.Eval()
 }
 
 // String returns the string representation of an Add
