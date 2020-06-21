@@ -27,12 +27,12 @@ func (n Num) String() string {
 	}
 
 	// If the string did not end with a non zero character cut of the trailing zeros
-	if zeroIndex != len(str) - 1 {
+	if zeroIndex != len(str)-1 {
 
-		cut := str[:zeroIndex + 1]
+		cut := str[:zeroIndex+1]
 
 		// Cut of the trailing dot if it exists
-		if cut[len(cut) - 1] == '.' {
+		if cut[len(cut)-1] == '.' {
 			return str[:zeroIndex]
 		}
 		return cut
