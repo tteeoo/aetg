@@ -27,6 +27,7 @@ The following operators are valid:
 * `-` Subtraction
 * `*` Multiplication
 * `/` Division
+* `^` Exponentiation
 
 # License
 All files are licensed under the MIT License
