@@ -22,7 +22,7 @@ Examples:
 
 `(5 * (3 - 6))`
 
-`(((8.11 + 7) ^ 3) - (2 * (5.23 / 8)))`
+`(((8.11 + -7) ^ 3) - (2 * (5.23 / 8)))`
 
 The following operators are valid:
 * `+` Addition
