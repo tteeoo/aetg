@@ -23,7 +23,7 @@ func newOp(symbol string, l exp.Exp, r exp.Exp) (exp.Exp, error) {
 	}
 }
 
-// GetExpTree takes a string which represents an expression and parses it into a tree of expression structs
+// GetExpTree takes a string and parses it into a tree of expression structs recursively
 func GetExpTree(strExp string) (exp.Exp, error) {
 
 	// Check if valid
