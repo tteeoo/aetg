@@ -21,7 +21,7 @@ Examples:
 
 `(5 * (3 - 6))`
 
-`(((8.11 + -7) ^ 3) - (2 * (5.23 / 8)))`
+`(((8.11 + -7) ^ 3) - (2 * (5.23 / (5 % 2))))`
 
 The following operators are valid:
 * `+` Addition
@@ -29,8 +29,9 @@ The following operators are valid:
 * `*` Multiplication
 * `/` Division
 * `^` Exponentiation
+* `%` Modulus
 
-## Flags
+### Flags
 * `--version` Display version information
 * `--verbose` Print expressions after parsing
 * `--file <filepath>` Read and run an expression from a file

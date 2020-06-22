@@ -18,6 +18,8 @@ func newOp(symbol string, l exp.Exp, r exp.Exp) (exp.Exp, error) {
 		return exp.Div{L: l, R: r}, nil
 	case "^":
 		return exp.Pow{L: l, R: r}, nil
+	case "%":
+		return exp.Mod{L: l, R: r}, nil
 	default:
 		return nil, errors.New("invalid operator symbol: " + string(symbol))
 	}
