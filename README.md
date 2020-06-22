@@ -31,5 +31,11 @@ The following operators are valid:
 * `/` Division
 * `^` Exponentiation
 
+## Flags
+* `--version` Display version information
+* `--verbose` Print expressions after parsing
+* `--file <filepath>` Read and run an expression from a file
+* `--expr <expression>` Run a specific expression without going into the shell
+
 # License
 All files are licensed under the MIT License
