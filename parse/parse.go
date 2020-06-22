@@ -1,9 +1,9 @@
 package parse
 
 import (
-	"strconv"
 	"errors"
 	"github.com/tteeoo/aetg/exp"
+	"strconv"
 )
 
 func newOp(symbol string, l exp.Exp, r exp.Exp) (exp.Exp, error) {
@@ -30,7 +30,7 @@ func GetExpTree(strExp string) (exp.Exp, error) {
 	if len(strExp) < 2 {
 		return nil, errors.New("no expression given")
 	}
-	if strExp[0] != '(' || strExp[len(strExp) - 1] != ')' {
+	if strExp[0] != '(' || strExp[len(strExp)-1] != ')' {
 		return nil, errors.New("expressions must be surrounded by parenthesis")
 	}
 
@@ -46,7 +46,7 @@ func GetExpTree(strExp string) (exp.Exp, error) {
 				subExp++
 			}
 		case ')':
-			if i != len(strExp) - 1 {
+			if i != len(strExp)-1 {
 				itemBuf += string(char)
 				subExp--
 			} else if itemBuf != "" {

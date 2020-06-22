@@ -1,8 +1,8 @@
 package exp
 
 import (
-	"math"
 	"fmt"
+	"math"
 )
 
 // Pow represents an exponential operation
