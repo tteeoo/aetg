@@ -49,7 +49,7 @@ func GetExpTree(strExp string) (exp.Exp, error) {
 			if i != len(strExp) - 1 {
 				itemBuf += string(char)
 				subExp--
-			} else {
+			} else if itemBuf != "" {
 				items = append(items, itemBuf)
 				itemBuf = ""
 			}
