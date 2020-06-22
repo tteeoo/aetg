@@ -1,7 +1,7 @@
 # aetg
 ➗ Arithmetic expression tree generator
 
-Inspired by [this video](https://www.youtube.com/watch?v=7tCNu4CnjVc) (though not in Python).
+Inspired by [this video](https://www.youtube.com/watch?v=7tCNu4CnjVc).
 
 `aetg` is essentially just a simple calculator with an annoying syntax.
 
