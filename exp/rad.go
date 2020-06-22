@@ -13,7 +13,7 @@ type Rad struct {
 
 // Eval returns the value of a Rad
 func (r Rad) Eval() float64 {
-	return math.Pow(r.R.Eval(), 1 / r.L.Eval())
+	return math.Pow(r.R.Eval(), 1/r.L.Eval())
 }
 
 // String returns the string representation of a Div
