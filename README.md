@@ -23,7 +23,7 @@ Examples:
 
 `(((8.11 + -7) ^ 3) - ((2 | 4) * (5.23 / (5 % 2))))`
 
-The following operators are valid:
+The following operators are supported:
 * `+` Addition
 * `-` Subtraction
 * `*` Multiplication
