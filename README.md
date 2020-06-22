@@ -21,7 +21,7 @@ Examples:
 
 `(5 * (3 - 6))`
 
-`(((8.11 + -7) ^ 3) - (2 * (5.23 / (5 % 2))))`
+`(((8.11 + -7) ^ 3) - ((2 | 4) * (5.23 / (5 % 2))))`
 
 The following operators are valid:
 * `+` Addition
@@ -30,6 +30,7 @@ The following operators are valid:
 * `/` Division
 * `^` Exponentiation
 * `%` Modulus
+* `|` Radical ((2 | number) for square root, etc.)
 
 ### Flags
 * `--version` Display version information
