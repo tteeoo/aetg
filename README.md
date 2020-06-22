@@ -1,5 +1,4 @@
 # aetg
-➗ Arithmetic expression tree generator
 
 Inspired by [this video](https://www.youtube.com/watch?v=7tCNu4CnjVc).
 
