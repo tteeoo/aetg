@@ -13,7 +13,7 @@ type Mod struct {
 
 // Eval returns the value of a Mod
 func (m Mod) Eval() float64 {
-	return math.Remainder(m.L.Eval(), m.R.Eval())
+	return float64(int(math.Round(m.L.Eval())) % int(math.Round(m.R.Eval())))
 }
 
 // String returns the string representation of a Mod
