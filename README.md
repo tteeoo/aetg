@@ -30,7 +30,7 @@ The following operators are valid:
 * `/` Division
 * `^` Exponentiation
 * `%` Modulus
-* `|` Radical ((2 | number) for square root, etc.)
+* `|` Radical (`(2 | number)` for square root, etc.)
 
 ### Flags
 * `--version` Display version information
