@@ -38,5 +38,13 @@ The following operators are supported:
 * `--file <filepath>` Read and run an expression from a file
 * `--expr <expression>` Run a specific expression without going into the shell
 
+# Installation
+
+It's just a single binary.
+
+You can compile with `go build`.
+
+A [Linux binary](https://github.com/tteeoo/aetg/releases/download/0.1.0/aetg-linux) is provided.
+
 # License
 All files are licensed under the MIT License
