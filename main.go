@@ -1,23 +1,36 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
+	"github.com/chzyer/readline"
 	"github.com/tteeoo/aetg/parse"
-	"os"
+	"io"
 )
 
 func main() {
 
+	// Use readline for arrow key movement, etc.
+	l, err := readline.NewEx(&readline.Config{
+		Prompt:          "aetg> ",
+		InterruptPrompt: "^C",
+		EOFPrompt:       "exit",
+	})
+	if err != nil {
+		fmt.Println("aetg: error:", err)
+	}
+
 	for {
 
 		// Take an expression from stdin
-		reader := bufio.NewReader(os.Stdin)
-		fmt.Print("aetg> ")
-		strExp, err := reader.ReadString('\n')
-		strExp = strExp[:len(strExp)-1]
-		if err != nil {
-			fmt.Println("aetg: error:", err)
+		strExp, err := l.Readline()
+		if err == readline.ErrInterrupt {
+			if len(strExp) == 0 {
+				break
+			} else {
+				continue
+			}
+		} else if err == io.EOF {
+			break
 		}
 
 		// Parse the expression
