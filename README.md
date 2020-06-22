@@ -1,7 +1,7 @@
 # aetg
 ➗ Arithmetic expression tree generator
 
-Inspired by [this video](https://www.youtube.com/watch?v=7tCNu4CnjVc).
+Inspired by [this video](https://www.youtube.com/watch?v=7tCNu4CnjVc) (though not in Python).
 
 `aetg` is essentially just a simple calculator with an annoying syntax.
 
@@ -18,9 +18,11 @@ Notation is as follows:
 
 `(<sub expr> operator <sub expr>)`
 
-Example:
+Examples:
 
 `(5 * (3 - 6))`
+
+`(((8.11 + 7) ^ 3) - (2 * (5.23 / 8)))`
 
 The following operators are valid:
 * `+` Addition
