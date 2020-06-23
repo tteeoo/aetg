@@ -70,6 +70,9 @@ func GetExpTree(strExp string) (exp.Exp, error) {
 			itemBuf += string(char)
 		}
 	}
+	if subExp != 0 {
+		return nil, errors.New("uneven parenthesis in expression")
+	}
 
 	// Further checking of validity
 	switch len(items) {
@@ -87,6 +90,9 @@ func GetExpTree(strExp string) (exp.Exp, error) {
 			return e, nil
 		}
 		return exp.Num{Val: f}, nil
+
+	case 2:
+		return nil, errors.New("expression: " + strExp + " has too few items")
 
 	// Parse operator expression
 	case 3:
@@ -122,6 +128,6 @@ func GetExpTree(strExp string) (exp.Exp, error) {
 		return e, nil
 
 	default:
-		return nil, errors.New("expressions can only have 1 or 3 items: " + strExp + " has " + strconv.Itoa(len(items)))
+		return nil, errors.New("expression: " + strExp + " has too many items")
 	}
 }
